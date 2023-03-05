@@ -128,13 +128,15 @@ class MyAppState extends ChangeNotifier {
 class MyHomePage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
-    var libname = 'ass.dll';
-    if (kDebugMode)
-    {
-      libname = 'assd.dll';
+    var libraryPath = '';
+    if (Platform.isMacOS) {
+      var libname = 'libass.dylib';
+      libraryPath = path.join(Directory.current.path, 'lib', 'macos', libname);
     }
-
-    var libraryPath = path.join(Directory.current.path, 'lib', 'win32', libname);
+    else if (Platform.isWindows) {
+      var libname = 'ass.dll';
+      libraryPath = path.join(Directory.current.path, 'lib', 'win32', libname);
+    }
 
     var appState = context.watch<MyAppState>();
     appState.dylib = ffi.DynamicLibrary.open(libraryPath);
@@ -151,7 +153,7 @@ class MyHomePage extends StatelessWidget {
 
     String defaultFont = path.join(fontDirPath, 'Montserrat-Bold.ttf');
     String defaultFamily = 'Montserrat';
-    appState.bindings.ass_set_fonts(appState.renderer, defaultFont.toNativeUtf8().cast<ffi.Char>(), defaultFamily.toNativeUtf8().cast<ffi.Char>(), 1, ffi.nullptr, 0);
+    appState.bindings.ass_set_fonts(appState.renderer, defaultFont.toNativeUtf8().cast<ffi.Char>(), defaultFamily.toNativeUtf8().cast<ffi.Char>(), 0, ffi.nullptr, 0);
     appState.bindings.ass_set_frame_size(appState.renderer, 600, 400);
 
     var assFilePath = path.join(Directory.current.path, 'lib', '[Erai-raws] Tomo-chan wa Onnanoko! - 01 [1080p][Multiple Subtitle][50D3873C].ANIBEL.ass');
