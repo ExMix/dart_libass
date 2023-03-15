@@ -38,6 +38,7 @@ dependencies:
   provider: ^6.0.0
   libass_binding: ^1.0.0
   ffi: ^2.0.1
+  bitmap_canvas: ^0.0.1+1
 
 dev_dependencies:
   flutter_test:

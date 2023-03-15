@@ -19,7 +19,7 @@ Video Position: 31756
 
 [V4+ Styles]
 Format: Name, Fontname, Fontsize, PrimaryColour, SecondaryColour, OutlineColour, BackColour, Bold, Italic, Underline, StrikeOut, ScaleX, ScaleY, Spacing, Angle, BorderStyle, Outline, Shadow, Alignment, MarginL, MarginR, MarginV, Encoding
-Style: Main,Montserrat Bold,72,&H00FFFFFF,&H000000FF,&H00000000,&H00000000,0,0,0,0,100,115,0.7,0,1,3,0,2,3,3,45,0
+Style: Main,Montserrat Bold,72,&H00AC1010,&H000000FF,&H00000000,&H00000000,0,0,0,0,100,115,0.7,0,1,3,0,2,3,3,45,0
 Style: Main_Italic,Montserrat Bold,72,&H00FFFFFF,&H000000FF,&H00000000,&H00000000,0,-1,0,0,100,115,0.7,0,1,3,0,2,3,3,45,0
 Style: Main_Top,Montserrat Bold,72,&H00FFFFFF,&H000000FF,&H00000000,&H00000000,0,0,0,0,100,115,0.7,0,1,3,0,8,3,3,45,0
 Style: Main_Top_Italic,Montserrat Bold,72,&H00FFFFFF,&H000000FF,&H00000000,&H00000000,0,-1,0,0,100,115,0.7,0,1,3,0,8,3,3,45,0
